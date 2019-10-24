@@ -15,4 +15,5 @@ spec:
   volumes:
   - name: mongodb-data
     persistentVolumeClaim:
-claimName: mongodb-pvc
+      claimName: mongodb-datadb-pvc
+status: {}
