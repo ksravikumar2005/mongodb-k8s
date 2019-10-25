@@ -1,0 +1,72 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongodb-pv1
+  namespace: mongodb
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: mongodb-sc
+  local:
+    path: /data/mongodb0
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - host01
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongodb-pv2
+  namespace: mongodb
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: mongodb-sc
+  local:
+    path: /data/mongodb1
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - host02
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongodb-pv3
+  namespace: mongodb
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: mongodb-sc
+  local:
+    path: /data/mongodb2
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - host01
+
