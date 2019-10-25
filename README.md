@@ -1,4 +1,4 @@
-# mongodb-k8s
+# mongodb-k8s; Steps to stand up your first mongo pod.
 
       kubectl get nodes
       git clone https://github.com/ksravikumar2005/mongodb-k8s.git
