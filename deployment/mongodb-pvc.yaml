@@ -6,6 +6,9 @@ metadata:
   namespace: mongodb
 spec:
   storageClassName: mongodb-sc
+  selector:
+    matchLabels:
+      name: mongodb-pv0 
   accessModes:
     - ReadWriteOnce
   resources:
@@ -20,6 +23,9 @@ metadata:
   namespace: mongodb
 spec:
   storageClassName: mongodb-sc
+  selector:
+    matchLabels: 
+      name: mongodb-pv1
   accessModes:
     - ReadWriteOnce
   resources:
@@ -34,6 +40,9 @@ metadata:
   namespace: mongodb
 spec:
   storageClassName: mongodb-sc
+  selector:
+    matchLabels:
+      name: mongodb-pv2
   accessModes:
     - ReadWriteOnce
   resources:

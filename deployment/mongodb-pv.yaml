@@ -2,8 +2,10 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongodb-pv1
+  name: mongodb-pv0
   namespace: mongodb
+  labels:
+    name: mongodb-pv0
 spec:
   capacity:
     storage: 10Gi
@@ -26,8 +28,10 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongodb-pv2
+  name: mongodb-pv1
   namespace: mongodb
+  labels: 
+    name: mongodb-pv1
 spec:
   capacity:
     storage: 10Gi
@@ -50,8 +54,10 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongodb-pv3
+  name: mongodb-pv2
   namespace: mongodb
+  labels:
+    name: mongodb-pv2
 spec:
   capacity:
     storage: 10Gi
