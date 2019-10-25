@@ -30,7 +30,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mongodb-data-0
+  name: mongodb-data-2
   namespace: mongodb
 spec:
   storageClassName: mongodb-sc
