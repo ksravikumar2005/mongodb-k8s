@@ -3,10 +3,10 @@ kind: Deployment
 metadata:
   labels:
     type: mongodb-deployment
-  name: mongodb-deployment
+  name: mongodb-deployment-0
   namespace: mongodb
 spec:
-  replicas: 3
+  replicas: 1
   strategy:
     type: Recreate
   template:
@@ -29,6 +29,6 @@ spec:
       volumes:
       - name: datadb
         persistentVolumeClaim:
-          claimName: datadb-pvc
+          claimName: mongodb-data-0
 status: {}
 
