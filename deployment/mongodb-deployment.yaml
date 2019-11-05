@@ -4,6 +4,7 @@ metadata:
   labels:
     type: mongodb-deployment
   name: mongodb-deployment
+  namespace: mongodb
 spec:
   replicas: 3
   strategy:
