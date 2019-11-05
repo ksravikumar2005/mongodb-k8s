@@ -6,12 +6,11 @@ metadata:
   name: mongodb-deployment-2
   namespace: mongodb
 spec:
-  replicas: 3
+  replicas: 1
   strategy:
     type: Recreate
   template:
     metadata:
-      creationTimestamp: null
       labels:
         io.service: mongodb
     spec:
