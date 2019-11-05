@@ -16,7 +16,7 @@ spec:
         io.service: mongodb
     spec:
       containers:
-      - image: ksravikumar2005/mongo:latest
+      - image: ksravikumar2005/mongodb:latest
         name: mongodb
         ports:
         - containerPort: 27017
